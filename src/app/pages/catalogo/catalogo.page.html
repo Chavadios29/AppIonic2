@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>Catálogo de Ejercicios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <div class="catalogo-container">
+    <ion-button expand="full" color="danger" [routerLink]="['/pecho']">
+      <ion-icon name="fitness-outline"></ion-icon>
+      Pecho
+    </ion-button>
+    <ion-button expand="full" color="danger" [routerLink]="['/espalda']">
+      <ion-icon name="body-outline"></ion-icon>
+      Espalda
+    </ion-button>
+    <ion-button expand="full" color="danger" [routerLink]="['/brazo']">
+      <ion-icon name="barbell-outline"></ion-icon>
+      Brazo
+    </ion-button>
+    <ion-button expand="full" color="danger" [routerLink]="['/pierna']">
+      <ion-icon name="walk-outline"></ion-icon>
+      Pierna
+    </ion-button>
+  </div>
+</ion-content>

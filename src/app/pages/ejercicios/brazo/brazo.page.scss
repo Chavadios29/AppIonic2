@@ -1,0 +1,48 @@
+.content {
+    --background: #1e1e1e; /* Fondo oscuro elegante */
+  }
+  
+  .title {
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+  
+  .exercise-card {
+    width: 90%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3); /* Sombra roja sutil */
+    transition: transform 0.2s;
+  }
+  
+  .exercise-card:hover {
+    transform: scale(1.03); /* Efecto de hover */
+  }
+  
+  .exercise-card ion-card-title {
+    font-size: 1.2rem;
+    color: #d32f2f; /* Rojo intenso */
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .exercise-card ion-card-content p {
+    font-size: 1rem;
+    color: #bbbbbb; /* Gris claro */
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  ion-button {
+    font-weight: bold;
+    border-radius: 10px;
+  }
+  

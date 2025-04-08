@@ -1,0 +1,82 @@
+ion-content {
+    --background: #f4f4f4;
+  
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+    }
+  
+    .form-box {
+      background: #fff;
+      padding: 15px; /* Reducir el padding */
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 360px; /* Reducir el ancho */
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      margin-top: 10px; /* Reducir espacio */
+    }
+  
+    .logo {
+      width: 80px; /* Reducir tamaño del logo */
+      height: auto;
+    }
+  
+    ion-item {
+      --border-radius: 8px;
+      margin-bottom: 12px; /* Reducir espacio entre campos */
+      padding: 0 10px; /* Reducir espacio interno */
+    }
+  
+    ion-input {
+      font-size: 14px; /* Reducir tamaño de fuente en los inputs */
+    }
+  
+    ion-button {
+      margin-top: 15px;
+      padding: 10px;
+      font-size: 14px; /* Reducir tamaño del botón */
+    }
+  
+    .error-text {
+      color: red;
+      font-size: 12px; /* Reducir tamaño de texto de error */
+      text-align: center;
+      margin-top: 5px;
+    }
+  
+    .login-link {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+  
+    .cta {
+      background: none;
+      border: none;
+      color: #007bff;
+      cursor: pointer;
+      font-weight: bold;
+      display: inline-flex;
+      align-items: center;
+    }
+  
+    .cta svg {
+      margin-left: 5px;
+      stroke: #007bff;
+      fill: none;
+      stroke-width: 2px;
+    }
+  }
+  

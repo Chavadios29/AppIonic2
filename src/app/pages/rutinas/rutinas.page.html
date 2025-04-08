@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="danger">
+    <ion-title>Rutinas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="light">
+  <div class="catalogo-container">
+    <ion-card button [routerLink]="['/ppl']" color="danger">
+      <ion-card-header>
+        <ion-card-title>
+          <ion-icon name="barbell-outline"></ion-icon> Push Pull Leg
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>Ideal para 3 días a la semana</ion-card-content>
+    </ion-card>
+
+    <ion-card button [routerLink]="['/arnoldSplit']" color="danger">
+      <ion-card-header>
+        <ion-card-title>
+          <ion-icon name="barbell-outline"></ion-icon> Arnold Split
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>Ideal para 6 días a la semana</ion-card-content>
+    </ion-card>
+
+    <ion-card button [routerLink]="['/fullbody']" color="danger">
+      <ion-card-header>
+        <ion-card-title>
+          <ion-icon name="body-outline"></ion-icon> Full Body
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>Ideal para 5 días a la semana</ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

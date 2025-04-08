@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Google Fit</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Actividad de hoy</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p class="card-data">{{ pasos }} pasos hoy</p>
+      <p class="card-data">{{ calorias | number:'1.0-0' }} kcal quemadas</p>
+      <p class="card-data">{{ (distancia / 1000) | number:'1.2-2' }} km recorridos</p>
+      <ion-button expand="block" color="primary" (click)="getData()">Obtener datos</ion-button>
+    </ion-card-content>
+  </ion-card>
+  <ion-button expand="block" color="success" (click)="buscarGimnasios()">
+    Buscar Gimnasios Cercanos
+  </ion-button>
+  
+</ion-content>

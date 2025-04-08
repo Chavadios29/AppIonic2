@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>Gym Helper</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="styled-content">
+  <div class="home-container">
+    <ion-button expand="full" color="danger" [routerLink]="['/rutinas']" class="custom-button">
+      <ion-icon name="barbell-outline"></ion-icon>
+      Ver Rutinas
+    </ion-button>
+    <ion-button expand="full" color="danger" [routerLink]="['/progreso']" class="custom-button">
+      <ion-icon name="trending-up-outline"></ion-icon>
+      Guardar Progreso
+    </ion-button>
+    <ion-button expand="full" color="danger" [routerLink]="['/catalogo']" class="custom-button">
+      <ion-icon name="body-outline"></ion-icon>
+      Catálogo de Ejercicios
+    </ion-button>
+    <ion-button expand="full" color="danger" [routerLink]="['/google']" class="custom-button">
+      <ion-icon name="body-outline"></ion-icon>
+      MyFIT
+    </ion-button>
+  </div>
+</ion-content>

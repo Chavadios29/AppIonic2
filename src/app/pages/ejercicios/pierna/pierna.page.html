@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-title class="title">Ejercicios de Pierna</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="content">
+  <ion-header collapse="condense">
+    <ion-toolbar color="dark">
+      <ion-title size="large" class="title">Ejercicios de Pierna</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="container">
+    <ion-card *ngFor="let ejercicio of ejercicios" class="exercise-card">
+      <ion-card-header>
+        <ion-card-title>{{ ejercicio.nombre }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{ ejercicio.descripcion }}</p>
+        <ion-button expand="block" fill="solid" color="danger" (click)="verDetalles(ejercicio)">
+          Ver Detalles
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

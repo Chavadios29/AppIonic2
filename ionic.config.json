@@ -1,0 +1,7 @@
+{
+  "name": "box_app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

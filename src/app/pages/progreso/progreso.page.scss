@@ -1,0 +1,41 @@
+/* Estilo para el contenido */
+.content {
+    padding: 20px;
+  }
+  
+  /* Estilo para el botón de guardar */
+  .submit-btn {
+    --background: #4CAF50; /* Verde brillante */
+    --color: white;
+    --border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  /* Estilo de los campos de entrada */
+  ion-item {
+    --inner-padding-top: 10px;
+    --inner-padding-bottom: 10px;
+    margin-bottom: 15px;
+  }
+  
+  ion-label {
+    font-weight: bold;
+    color: #4CAF50;
+  }
+  
+  ion-input, ion-datetime {
+    --padding-start: 10px;
+    --padding-end: 10px;
+    font-size: 16px;
+  }
+  
+  /* Diseño responsivo */
+  @media (max-width: 767px) {
+    .content {
+      padding: 10px;
+    }
+    ion-item {
+      margin-bottom: 10px;
+    }
+  }
+  
