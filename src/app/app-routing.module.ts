@@ -14,6 +14,7 @@ import { PPLPage } from './pages/Rutinas/ppl/ppl.page';
 import { FullBodyPage } from './pages/Rutinas/full-body/full-body.page';
 import { ArnoldSlpitPage } from './pages/Rutinas/arnold-slpit/arnold-slpit.page';
 import { GoogleFitPage } from './pages/google-fit/google-fit.page';
+import { AvisoDePrivacidadPage } from './pages/aviso-de-privacidad/aviso-de-privacidad.page';
 
 const routes: Routes = [
   {
@@ -84,6 +85,12 @@ const routes: Routes = [
     path: 'google-fit',
     component:GoogleFitPage
   },
+  //Aviso De privacidad//
+  {
+    path: 'aviso-de-privacidad',
+    component:AvisoDePrivacidadPage
+  },
+
 ];
 
 
@@ -154,6 +161,13 @@ bootstrapApplication(ProgresoPage, {
 });
 /////GoogleFit
 bootstrapApplication(GoogleFitPage, {
+  providers: [
+    provideRouter(routes),  // Configura el enrutador aquí
+    RouterModule
+  ]
+});
+/////GoogleFit
+bootstrapApplication(AvisoDePrivacidadPage, {
   providers: [
     provideRouter(routes),  // Configura el enrutador aquí
     RouterModule
