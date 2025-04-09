@@ -13,6 +13,7 @@ import { ArnoldSlpitPage } from './pages/Rutinas/arnold-slpit/arnold-slpit.page'
 import { FullBodyPage } from './pages/Rutinas/full-body/full-body.page';
 import { ProgresoPage } from './pages/progreso/progreso.page';
 import { GoogleFitPage } from './pages/google-fit/google-fit.page';
+import { AvisoDePrivacidadPage } from './pages/aviso-de-privacidad/aviso-de-privacidad.page';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -36,6 +37,9 @@ export const routes: Routes = [
   {path: 'progreso', component:ProgresoPage},
 
   ////My fit
-  {path: 'google', component:GoogleFitPage}
+  {path: 'google', component:GoogleFitPage},
+  
+  ////Aviso De privacidad
+  {path: 'aviso', component:AvisoDePrivacidadPage}
   
 ];

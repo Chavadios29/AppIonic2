@@ -13,7 +13,8 @@ import { ProgresoPage } from './progreso.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    ProgresoPageRoutingModule
+    ProgresoPageRoutingModule,
+    
   ],
   declarations: [ProgresoPage]
 })

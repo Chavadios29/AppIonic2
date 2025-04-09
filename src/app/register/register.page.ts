@@ -1,59 +1,53 @@
 import { Component } from '@angular/core';
-import { AuthService } from 'src/services/auth.service';
-import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.page.html',
   styleUrls: ['./register.page.scss'],
   standalone: true,
-  imports: [CommonModule, FormsModule, IonicModule, RouterModule],
+  imports: [CommonModule, IonicModule, FormsModule],
 })
 export class RegisterPage {
-  nombreCompleto = '';
-  username = '';
-  email = '';
-  password = '';
-  confirmPassword = '';
-  mostrarErrorPasswords = false;
 
-  constructor(private authService: AuthService, private router: Router) {}
+  nombreCompleto: string = '';
+  username: string = '';
+  email: string = '';
+  password: string = '';
+  confirmPassword: string = '';
+  aceptoAvisoPrivacidad: boolean = false;
+  mostrarErrorPasswords: boolean = false;
 
+  constructor(private router: Router) {}
+
+  // Función para validar si las contraseñas coinciden
   validarPasswords() {
-    this.mostrarErrorPasswords = this.confirmPassword !== '' && this.password !== this.confirmPassword;
+    this.mostrarErrorPasswords = this.password !== this.confirmPassword;
   }
 
-  formValido(): boolean {
-    return this.nombreCompleto !== '' && this.username !== '' &&
-           this.email !== '' && this.password !== '' &&
-           this.confirmPassword !== '' && !this.mostrarErrorPasswords;
-  }
+  // Función para registrar al usuario
+  register() {
+    if (!this.aceptoAvisoPrivacidad) {
+      alert('Debes aceptar el aviso de privacidad para registrarte.');
+      return;
+    }
 
-  async register() {
     if (this.mostrarErrorPasswords) {
       alert('Las contraseñas no coinciden.');
       return;
     }
 
-    try {
-      // ✅ Llamamos correctamente a `register()` con los 4 parámetros
-      await this.authService.register(this.email, this.password, this.username, this.nombreCompleto);
-      alert('Registro exitoso. Redirigiendo al login...');
-      this.router.navigate(['/login']);
-    } catch (error: unknown) {
-      let errorMessage = 'Ocurrió un error, por favor intente nuevamente.';
-      if (error instanceof Error) {
-        errorMessage = error.message;
-      }
-      alert(errorMessage);
-    }
+    // Aquí va tu lógica de registro (puedes agregar más lógica o hacer un llamado a un servicio)
+    console.log('Usuario registrado:', this.nombreCompleto, this.username, this.email);
+    // Redirige a una página, por ejemplo, a la página principal
+    this.router.navigate(['/home']);
   }
 
-  irAPaginaLogin() {
-    this.router.navigate(['/login']);
+  // Función para redirigir al usuario al Aviso de Privacidad
+  verAvisoPrivacidad() {
+    this.router.navigate(['/aviso']);
   }
 }

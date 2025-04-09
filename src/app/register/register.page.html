@@ -8,13 +8,14 @@
   <ion-grid class="form-container">
     <ion-row class="ion-justify-content-center">
       <ion-col size-md="6" size-sm="12">
-        
+
         <!-- LOGO -->
         <div class="logo-container">
           <img src="assets/logo.png" alt="App Logo" class="logo">
         </div>
 
         <form (ngSubmit)="register()">
+
           <ion-item>
             <ion-icon name="person" slot="start"></ion-icon>
             <ion-label position="floating">Nombre Completo</ion-label>
@@ -47,20 +48,24 @@
 
           <p *ngIf="mostrarErrorPasswords" class="error-text">Las contraseñas no coinciden</p>
 
-          <ion-button expand="full" type="submit" [disabled]="!formValido()">Registrarse</ion-button>
+          <!-- Checkbox Aviso de Privacidad -->
+          <ion-item lines="none">
+            <ion-checkbox slot="start" [(ngModel)]="aceptoAvisoPrivacidad" name="aceptoAvisoPrivacidad"></ion-checkbox>
+            <ion-label>
+              He leído y acepto el 
+              <a (click)="verAvisoPrivacidad()" style="color: var(--ion-color-primary); text-decoration: underline; cursor: pointer;">
+                Aviso de Privacidad
+              </a>
+            </ion-label>
+          </ion-item>
+
+          <!-- Botón de Registro -->
+          <ion-button expand="full" type="submit"
+            [disabled]="!nombreCompleto || !username || !email || !password || !confirmPassword || mostrarErrorPasswords || !aceptoAvisoPrivacidad">
+            Registrarse
+          </ion-button>
+
         </form>
-
-        <p class="login-link">
-          ¿Ya tienes cuenta?  
-          <button class="cta" (click)="irAPaginaLogin()">
-            <span>Inicia sesión</span>
-            <svg width="15px" height="10px" viewBox="0 0 13 10">
-              <path d="M1,5 L11,5"></path>
-              <polyline points="8 1 12 5 8 9"></polyline>
-            </svg>
-          </button>
-        </p>
-
       </ion-col>
     </ion-row>
   </ion-grid>
